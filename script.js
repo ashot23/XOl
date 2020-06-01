@@ -355,7 +355,7 @@ en9 = 0
                                  gameO7++ 
                                  if (gameO7==3) {
                                     win()
-                                    gic(2,4,6,"X3")
+                                    gic(2,4,6,"o3")
                                  }
                                  if (gameO5==3) {
                                     win()
