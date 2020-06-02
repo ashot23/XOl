@@ -39,7 +39,67 @@ var gameO5 = 0
 var gameO6 = 0
 var gameO7 = 0
  var en9 = 0
+ var gamer1 = "Խաղցող1"
+ var gamer2 = "Խաղցող2"
+ var tsag = document.getElementsByClassName("tdag1")
+var input1 = document.getElementById("t1")
+var input2 = document.getElementById("t2")
+var divner = document.getElementsByClassName("input")
 
+
+
+console.log();
+
+input1.onchange = function () {
+     
+    
+   tsag[0].textContent = this.value
+   gamer1 =this.value 
+       divner[0].removeChild(this)
+
+}
+input2.onchange = function () {
+  tsag[1].textContent = this.value
+
+  gamer2 =this.value 
+  divner[0].removeChild(this)
+}
+
+
+
+
+      function input() {
+      var mains = document.getElementsByClassName("table")
+     var table = document.createElement("table")
+     mains[0].append(table)
+       var tr = document.createElement("tr")    
+      table.append(tr)
+      table.setAttribute("class","table")
+      var td = document.createElement("td")
+      var td1 = document.createElement("td")
+        td.setAttribute("class","tdag1")
+        td1.setAttribute("class","tdag1")
+      tr.append(td)
+      tr.append(td1)
+      // td.textContent = gamer1
+      // td1.textContent = gamer2
+
+
+
+      var trs = document.createElement("tr")    
+      table.append(trs)
+      var tda = document.createElement("td")
+      var tda1 = document.createElement("td")
+      trs.append(tda)
+      trs.append(tda1)
+       tda.setAttribute("id","xax1")
+       tda1.setAttribute("id","xax")
+      }
+
+input()
+
+tsag[0].textContent = gamer1
+tsag[1].textContent = gamer2
 
 function gic(id1,id2,id3,nk) {
   var xs1 = document.getElementById(id1)
@@ -65,25 +125,127 @@ function gic(id1,id2,id3,nk) {
  }
 
 
-
-
+ var xa = 0
+ var xa2 = 0
+var td1a = document.getElementById("xax")
+var td2a = document.getElementById("xax1")
+td1a.textContent = xa
+td2a.textContent = xa2
 
 function win() {
-
-var sdiv = document.getElementsByClassName("div0")
-
-for (let i = 0; i < sdiv.length; i++) {
-  sdiv[i].onclick = "None"
+ 
+  var xaxs2 = document.getElementById("xax")
+  var xaxs1 = document.getElementById("xax1")
+  if (gameX==3||gameX1==3||gameX2==3||gameX3==3||gameX4==3||gameX5==3||gameX6==3||gameX7==3) {
+    xa +=1
+    xaxs1.textContent = xa
+    
+   
+    setTimeout(() => {
   
+      alert("Հախտեց "+gamer1+"-ը")
+      end()
+      }, 300);
+      
+      }
+
+
+      if (gameO==3||gameO1==3||gameO2==3||gameO3==3||gameO4==3||gameO5==3||gameO6==3||gameO7==3) {
+        var xaxs2 = document.getElementById("xax")
+        xa2 +=1
+        xaxs2.textContent = xa2
+       
+       
+        setTimeout(() => {
+      
+          alert("Հախտեց "+gamer2+"-ը")
+          end()
+          }, 300);
+          
+          }
+if (xaxs1.textContent==5||xaxs2.textContent==5) {
+         
+   tsag[0].textContent = "Խաղցող1"
+   tsag[1].textContent = "Խաղցող2"
+
+var bron = document.createElement("input")
+var br =document.createElement("br")
+var brom = document.createElement("input")
+divner[0].append(bron)
+divner[0].append(br)
+divner[0].append(brom)
+bron.setAttribute("id","t1")
+brom.setAttribute("id","t2")
+bron.setAttribute("placeholder","Խաղցող 1")
+brom.setAttribute("placeholder","Խաղցող 2")
+bron.setAttribute("type","text")
+brom.setAttribute("type","text")
+
+
+
+
+bron.onchange = function () {
+     
+  tsag[0].textContent = this.value
+  gamer1 =this.value 
+      divner[0].removeChild(this)
+
+}
+brom.onchange = function () {
+ tsag[1].textContent = this.value
+
+ gamer2 =this.value 
+ divner[0].removeChild(this)
 }
 
-setTimeout(() => {
-  
-alert("Հախտանակ")
-end()
-}, 800);
 
-}
+
+
+
+
+
+
+
+
+
+
+
+  if (xaxs1.textContent==5) {
+    alert("Ապրի "+gamer2+"-ը կրեց մարդը")
+  }
+         
+  if (xaxs2.textContent==5) {
+    alert("Ապրի "+gamer1+"-ը կրեց մարդը")
+  }
+    xa = 0
+    xa2 = 0
+    xaxs1.textContent=0
+    xaxs2.textContent=0
+
+   
+  }
+
+
+
+          var sdiv = document.getElementsByClassName("div0")
+
+          for (let i = 0; i < sdiv.length; i++) {
+            sdiv[i].onclick = "None"
+            
+          }
+
+
+     
+  }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -92,7 +254,7 @@ function end() {
   var nkar = document.getElementsByClassName("ico")
   if (nkar[0]) {
     document.body.removeChild(nkar[0])
-    console.log(nkar);
+   
   }
 
 
@@ -130,7 +292,7 @@ en9 = 0
     
 
             mej[s].onclick =  function games(params) {
-              console.log(mej[s]);
+              
                 en9++
 
 
@@ -546,7 +708,7 @@ var mej = document.getElementsByClassName("div0")
     
 
     mej[s].onclick =  function games() {
-        console.log(mej[s]);
+      
         en9++
         var d = document.createElement("div") 
         mej[s].appendChild(d)

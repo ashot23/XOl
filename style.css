@@ -20,6 +20,22 @@
            
             }
 
+table{
+width: 200px;
+height: 100px;
+border: 1px solid black;
+border-collapse: collapse;
+float: right;
+margin-right: 250px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+font-size: 40px;
+border-radius: 10px;
+}
+td{
+    border: 1px solid black;
+}
+
             .X{
                 width: 100px;
                 height: 100px;
@@ -46,3 +62,18 @@ background-size: cover;
 background-size: cover;
                   
             }
+
+            input{
+                
+      height: 60px;
+    margin-right: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+font-size: 20px;
+            }
+            .input{
+
+                display: inline-block;
+                margin-left: 400px;
+            }
+        
