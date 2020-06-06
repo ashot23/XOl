@@ -19,8 +19,8 @@ var gameO6 = 0
 var gameO7 = 0
 
 var en9 = 0
-var gamer1 = "Խաղցող1 (X)"
-var gamer2 = "Խաղցող2 (O)"
+var gamer1 = "Խաղցող1"
+var gamer2 = "Խաղցող2"
 var tsag = document.getElementsByClassName("tdag1")
 var input1 = document.getElementById("t1")
 var input2 = document.getElementById("t2")
@@ -70,6 +70,19 @@ function input() {
 
 
 
+  var trsa = document.createElement("tr")
+  table.append(trsa)
+  var tdaz = document.createElement("td")
+  var tdaz1 = document.createElement("td")
+  trsa.append(tdaz)
+  trsa.append(tdaz1)
+  tdaz.setAttribute("class", "xo")
+  tdaz.textContent = "X"
+  tdaz1.textContent = "O"
+  tdaz1.setAttribute("id", "ox")
+
+
+
   var trs = document.createElement("tr")
   table.append(trs)
   var tda = document.createElement("td")
@@ -78,6 +91,14 @@ function input() {
   trs.append(tda1)
   tda.setAttribute("id", "xax1")
   tda1.setAttribute("id", "xax")
+
+
+
+
+
+
+
+
 }
 
 input()
@@ -143,7 +164,7 @@ if (bax) {
 }
 else{
 
-  alert("Հախտեց " + gamer1 + "ը")
+  alert("Հախտեց " + gamer1 + "-ը")
 
 }
       end()
@@ -171,7 +192,7 @@ if (bax1) {
   }
 }
 else{
-  alert("Հախտեց " + gamer2 + "ը")
+  alert("Հախտեց " + gamer2 + "-ը")
 
   
    
@@ -205,13 +226,13 @@ else{
 
           bron.onchange = function () {
 
-            tsag[0].textContent = this.value + "(X)"
+            tsag[0].textContent = this.value
             gamer1 = this.value
             divner[0].removeChild(this)
       
           }
           brom.onchange = function () {
-            tsag[1].textContent = this.value+"(O)"
+            tsag[1].textContent = this.value
       
             gamer2 = this.value
             divner[0].removeChild(this)
@@ -251,7 +272,7 @@ else{
     }
   }
     else{
-      alert("Ապրի " + gamer1 + "ը կրեց մարդը")
+      alert("Ապրի " + gamer1 + "-ը կրեց մարդը")
     }
 
       
@@ -275,7 +296,7 @@ if (bax1) {
   } 
 }
      else{
-      alert("Ապրի " + gamer2 + "ը կրեց մարդը")
+      alert("Ապրի " + gamer2 + "-ը կրեց մարդը")
      } 
 
 
@@ -378,7 +399,7 @@ function end() {
       this.onclick = "None"
 
       if (en9 == 9) {
-        console.log('esim');
+      
         setTimeout(() => {
           end()
         }, 300);
@@ -390,7 +411,7 @@ function end() {
 
       if (X == 0 && O == 0) {
         d.setAttribute("class", "X")
-        imga("IMG/o.jpg")
+        imga("IMG/OO.png")
         O = 1
         
 
@@ -563,7 +584,7 @@ function end() {
       }
       else if (X == 0 && O == 1) {
         d.setAttribute("class", "O")
-        imga("IMG/X.jpg")
+        imga("IMG/XX.png")
 
 
         O = 0
@@ -810,7 +831,7 @@ for (let s = 0; s < mej.length; s++) {
     this.onclick = "None"
 
     if (en9 == 9) {
-      console.log('esim');
+
       setTimeout(() => {
         end()
       }, 300);
@@ -822,7 +843,7 @@ for (let s = 0; s < mej.length; s++) {
 
     if (X == 0 && O == 0) {
       d.setAttribute("class", "X")
-      imga("IMG/o.jpg")
+      imga("IMG/OO.png")
       O = 1
     
 
@@ -994,7 +1015,7 @@ for (let s = 0; s < mej.length; s++) {
     }
     else if (X == 0 && O == 1) {
       d.setAttribute("class", "O")
-      imga("IMG/X.jpg")
+      imga("IMG/XX.png")
 
 
       O = 0

@@ -1,3 +1,8 @@
+body{
+    background-image: url("IMG/web-design-2906159_1920.jpg");
+    background-size: cover;
+}
+
 .main{
     width: 306px;
     height: 306px;
@@ -21,9 +26,10 @@
             }
 
 table{
+    color: white;
 width: 200px;
 height: 100px;
-border: 1px solid black;
+border: 2px solid black;
 border-collapse: collapse;
 float: right;
 margin-right: 250px;
@@ -54,16 +60,17 @@ background-size: cover;
 
             .ico{
                     display: block;
-                    margin: 0 auto;
-                width: 100px;
-                height: 100px;
-       background-image: url("IMG/o.jpg");
+                    margin: 20px auto;
+                width: 70px;
+                height: 70px;
        background-repeat: no-repeat;
 background-size: cover;
                   
             }
+   
 
             input{
+                
                 
       height: 60px;
     margin-right: 200px;
